@@ -1,0 +1,42 @@
+global:
+  scrape_interval:     15s    # 收集 一次数据 间隔
+  evaluation_interval: 15s    # 评估 一次规则 间隔
+  scrape_timeout:      10s    # 每次 收集数据的 超时时间
+
+# 收集数据 配置 列表
+scrape_configs:
+  - job_name: grafana
+    static_configs:
+      - targets: ["192.168.8.244:9090"]
+        labels:
+          instance: prometheus
+  - job_name: prometheus                      # 必须配置, 自动附加的job labels, 必须唯一
+    static_configs:
+      - targets: ['192.168.8.244:9090']       # 指定prometheus ip端口
+        labels:
+          instance: prometheus                #标签
+
+  - job_name: node_exporter
+    static_configs:
+      - targets: ["192.168.8.244:9100"]
+
+  - job_name: 'smart-exporter'
+    static_configs:
+      - targets: ['192.168.8.244:9902']
+
+  - job_name: 'alertmanager'
+    static_configs:
+      - targets: ['192.168.8.244:9093']
+
+  - job_name: backend
+    static_configs:
+      - targets: ["192.168.8.244:8881"]
+
+alerting:                         #Alertmanager相关的配置
+  alertmanagers:
+  - static_configs:
+    - targets:
+      - 192.168.8.244:9093         #指定告警模块
+
+rule_files:                      #告警规则文件, 可以使用通配符 
+  - "/etc/prometheus/rules/*.yml"

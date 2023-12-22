@@ -1,0 +1,63 @@
+version: '3.2'
+services:
+  grafana:
+    image: grafana/grafana
+    restart: "always"
+    ports:
+      - "3000:3000"
+    container_name: "grafana"
+    volumes:
+      - "/data/grafana/grafana-storage:/var/lib/grafana"
+  prometheus:
+    image: prom/prometheus
+    restart: "always"
+    ports:
+      - "9090:9090"
+    container_name: "prometheus"
+    volumes:
+      - "/data/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml"
+      - "/data/prometheus/rules:/etc/prometheus/rules"
+      - "/data/prometheus/data:/prometheus"
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'          # 设置yml路径  跟上面挂载对应
+      - '--storage.tsdb.path=/prometheus'                       # 设置数据路径   跟上面挂载对应
+
+  alertmanager:
+    image: prom/alertmanager:latest
+    restart: "always"
+    ports:
+      - 9093:9093
+    container_name: "alertmanager"
+    volumes:
+      - "./alert/alertmanager.yml:/etc/alertmanager/alertmanager.yml"
+
+      
+  smartctl-exporter:
+      image: matusnovak/prometheus-smartctl:latest
+      container_name: smartctl-exporter
+      privileged: true
+      ports:
+        - "9902:9902"
+      restart: unless-stopped
+
+  node_exporter:
+    image: prom/node-exporter
+    container_name: node_exporter
+    command:
+      - '--path.rootfs=/rootfs'
+      - '--path.sysfs=/host/sys'
+      - '--path.procfs=/host/proc'
+      # - '--collector.textfile.directory=/var/lib/node_exporter/textfile_collector' # smart 配置. 会自动读取该目录下的文件
+    volumes:
+      - proc:/host/proc:ro
+      - sys:/host/sys:ro
+      - '/:/host:ro,rslave'
+      # - '/var/lib/node_exporter/textfile_collector:/var/lib/node_exporter/textfile_collector'
+    depends_on:
+      - prometheus
+    pid: host
+    restart: unless-stopped
+    environment:
+      - TZ=Asia/Shanghai
+    ports:
+      - 9100:9100

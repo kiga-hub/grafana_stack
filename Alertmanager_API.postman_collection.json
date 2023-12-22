@@ -1,0 +1,1349 @@
+{
+	"info": {
+		"_postman_id": "857fd537-2f8a-47e9-a77d-589f689c4ab6",
+		"name": "Alertmanager API",
+		"description": "API of the Prometheus Alertmanager (https://github.com/prometheus/alertmanager)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "silences",
+			"item": [
+				{
+					"name": "get Silences",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/silences?filter=magna&filter=cupidatat ea sint",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"silences"
+							],
+							"query": [
+								{
+									"key": "filter",
+									"value": "magna",
+									"description": "A list of matchers to filter silences by"
+								},
+								{
+									"key": "filter",
+									"value": "cupidatat ea sint",
+									"description": "A list of matchers to filter silences by"
+								}
+							]
+						},
+						"description": "Get a list of silences"
+					},
+					"response": [
+						{
+							"name": "Get silences response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/silences?filter=sint pariat&filter=veniam",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"silences"
+									],
+									"query": [
+										{
+											"key": "filter",
+											"value": "sint pariat"
+										},
+										{
+											"key": "filter",
+											"value": "veniam"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"comment\": \"Lorem Excepteur\",\n    \"createdBy\": \"enim eiusmod aute voluptate\",\n    \"endsAt\": \"2002-07-06T20:26:31.575Z\",\n    \"id\": \"veniam minim irure Excepteur do\",\n    \"matchers\": [\n      {\n        \"name\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"isRegex\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"isEqual\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    ],\n    \"startsAt\": \"1993-07-07T04:57:05.456Z\",\n    \"status\": {\n      \"state\": \"active\"\n    },\n    \"updatedAt\": \"1958-05-31T08:15:43.140Z\"\n  },\n  {\n    \"comment\": \"est dolor ipsum velit\",\n    \"createdBy\": \"dolor magna\",\n    \"endsAt\": \"1944-03-14T21:05:33.605Z\",\n    \"id\": \"officia consequat\",\n    \"matchers\": [\n      {\n        \"name\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"isRegex\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"isEqual\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    ],\n    \"startsAt\": \"1945-05-09T07:22:21.874Z\",\n    \"status\": {\n      \"state\": \"active\"\n    },\n    \"updatedAt\": \"1963-12-24T04:12:06.313Z\"\n  }\n]"
+						},
+						{
+							"name": "Bad request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/silences?filter=sint pariat&filter=veniam",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"silences"
+									],
+									"query": [
+										{
+											"key": "filter",
+											"value": "sint pariat"
+										},
+										{
+											"key": "filter",
+											"value": "veniam"
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "\"incididunt la\""
+						},
+						{
+							"name": "Internal server error",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/silences?filter=sint pariat&filter=veniam",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"silences"
+									],
+									"query": [
+										{
+											"key": "filter",
+											"value": "sint pariat"
+										},
+										{
+											"key": "filter",
+											"value": "veniam"
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "\"incididunt la\""
+						}
+					]
+				},
+				{
+					"name": "post Silences",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"matchers\": [\n    {\n      \"name\": \"laboris sunt\",\n      \"value\": \"Excepteur dolore\",\n      \"isRegex\": true,\n      \"isEqual\": true\n    }\n  ],\n  \"startsAt\": \"1987-07-25T04:30:00.163Z\",\n  \"endsAt\": \"2002-06-17T22:52:07.597Z\",\n  \"createdBy\": \"et consectetur Duis\",\n  \"comment\": \"Ut cupidatat\",\n  \"id\": \"nulla aliquip commodo exercitation\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/silences",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"silences"
+							]
+						},
+						"description": "Post a new silence or update an existing one"
+					},
+					"response": [
+						{
+							"name": "Create / update silence response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"matchers\": [\n    {\n      \"name\": \"laboris sunt\",\n      \"value\": \"Excepteur dolore\",\n      \"isRegex\": true,\n      \"isEqual\": true\n    }\n  ],\n  \"startsAt\": \"1987-07-25T04:30:00.163Z\",\n  \"endsAt\": \"2002-06-17T22:52:07.597Z\",\n  \"createdBy\": \"et consectetur Duis\",\n  \"comment\": \"Ut cupidatat\",\n  \"id\": \"nulla aliquip commodo exercitation\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/silences",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"silences"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"silenceID\": \"ea tempor\"\n}"
+						},
+						{
+							"name": "Bad request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"matchers\": [\n    {\n      \"name\": \"laboris sunt\",\n      \"value\": \"Excepteur dolore\",\n      \"isRegex\": true,\n      \"isEqual\": true\n    }\n  ],\n  \"startsAt\": \"1987-07-25T04:30:00.163Z\",\n  \"endsAt\": \"2002-06-17T22:52:07.597Z\",\n  \"createdBy\": \"et consectetur Duis\",\n  \"comment\": \"Ut cupidatat\",\n  \"id\": \"nulla aliquip commodo exercitation\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/silences",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"silences"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "\"incididunt la\""
+						},
+						{
+							"name": "A silence with the specified ID was not found",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"matchers\": [\n    {\n      \"name\": \"laboris sunt\",\n      \"value\": \"Excepteur dolore\",\n      \"isRegex\": true,\n      \"isEqual\": true\n    }\n  ],\n  \"startsAt\": \"1987-07-25T04:30:00.163Z\",\n  \"endsAt\": \"2002-06-17T22:52:07.597Z\",\n  \"createdBy\": \"et consectetur Duis\",\n  \"comment\": \"Ut cupidatat\",\n  \"id\": \"nulla aliquip commodo exercitation\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/silences",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"silences"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "\"incididunt la\""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "silence/{silence ID}",
+			"item": [
+				{
+					"name": "get Silence",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/silence/:silenceID",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"silence",
+								":silenceID"
+							],
+							"variable": [
+								{
+									"key": "silenceID",
+									"value": "304c639b-7ad8-1679-cbb0-b90e0f409948",
+									"description": "(Required) ID of the silence to get"
+								}
+							]
+						},
+						"description": "Get a silence by its ID"
+					},
+					"response": [
+						{
+							"name": "Get silence response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/silence/:silenceID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"silence",
+										":silenceID"
+									],
+									"variable": [
+										{
+											"key": "silenceID",
+											"value": "304c639b-7ad8-1679-cbb0-b90e0f409948",
+											"description": "(Required) ID of the silence to get"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"comment\": \"non aute\",\n  \"createdBy\": \"ut velit consectetur ea\",\n  \"endsAt\": \"2005-09-28T03:32:50.670Z\",\n  \"id\": \"anim pariatur in dolor esse\",\n  \"matchers\": [\n    {\n      \"name\": \"Excepteur deserunt\",\n      \"value\": \"aliqua in\",\n      \"isRegex\": true,\n      \"isEqual\": true\n    }\n  ],\n  \"startsAt\": \"2007-08-07T00:21:20.078Z\",\n  \"status\": {\n    \"state\": \"active\"\n  },\n  \"updatedAt\": \"1945-11-10T15:37:48.501Z\"\n}"
+						},
+						{
+							"name": "A silence with the specified ID was not found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/silence/:silenceID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"silence",
+										":silenceID"
+									],
+									"variable": [
+										{
+											"key": "silenceID",
+											"value": "304c639b-7ad8-1679-cbb0-b90e0f409948",
+											"description": "(Required) ID of the silence to get"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Internal server error",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/silence/:silenceID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"silence",
+										":silenceID"
+									],
+									"variable": [
+										{
+											"key": "silenceID",
+											"value": "304c639b-7ad8-1679-cbb0-b90e0f409948",
+											"description": "(Required) ID of the silence to get"
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "\"incididunt la\""
+						}
+					]
+				},
+				{
+					"name": "delete Silence",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/silence/:silenceID",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"silence",
+								":silenceID"
+							],
+							"variable": [
+								{
+									"key": "silenceID",
+									"value": "304c639b-7ad8-1679-cbb0-b90e0f409948",
+									"description": "(Required) ID of the silence to get"
+								}
+							]
+						},
+						"description": "Delete a silence by its ID"
+					},
+					"response": [
+						{
+							"name": "Delete silence response",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/silence/:silenceID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"silence",
+										":silenceID"
+									],
+									"variable": [
+										{
+											"key": "silenceID",
+											"value": "304c639b-7ad8-1679-cbb0-b90e0f409948",
+											"description": "(Required) ID of the silence to get"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "A silence with the specified ID was not found",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/silence/:silenceID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"silence",
+										":silenceID"
+									],
+									"variable": [
+										{
+											"key": "silenceID",
+											"value": "304c639b-7ad8-1679-cbb0-b90e0f409948",
+											"description": "(Required) ID of the silence to get"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Internal server error",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/silence/:silenceID",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"silence",
+										":silenceID"
+									],
+									"variable": [
+										{
+											"key": "silenceID",
+											"value": "304c639b-7ad8-1679-cbb0-b90e0f409948",
+											"description": "(Required) ID of the silence to get"
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "\"incididunt la\""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "alerts",
+			"item": [
+				{
+					"name": "get Alerts",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/alerts?active=true&silenced=true&inhibited=true&unprocessed=true&filter=magna&filter=cupidatat ea sint&receiver=incididunt la",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"alerts"
+							],
+							"query": [
+								{
+									"key": "active",
+									"value": "true",
+									"description": "Show active alerts"
+								},
+								{
+									"key": "silenced",
+									"value": "true",
+									"description": "Show silenced alerts"
+								},
+								{
+									"key": "inhibited",
+									"value": "true",
+									"description": "Show inhibited alerts"
+								},
+								{
+									"key": "unprocessed",
+									"value": "true",
+									"description": "Show unprocessed alerts"
+								},
+								{
+									"key": "filter",
+									"value": "magna",
+									"description": "A list of matchers to filter alerts by"
+								},
+								{
+									"key": "filter",
+									"value": "cupidatat ea sint",
+									"description": "A list of matchers to filter alerts by"
+								},
+								{
+									"key": "receiver",
+									"value": "incididunt la",
+									"description": "A regex matching receivers to filter alerts by"
+								}
+							]
+						},
+						"description": "Get a list of alerts"
+					},
+					"response": [
+						{
+							"name": "Get alerts response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/alerts?active=true&silenced=true&inhibited=true&unprocessed=true&filter=sint pariat&filter=veniam&receiver=incididunt la",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"alerts"
+									],
+									"query": [
+										{
+											"key": "active",
+											"value": "true"
+										},
+										{
+											"key": "silenced",
+											"value": "true"
+										},
+										{
+											"key": "inhibited",
+											"value": "true"
+										},
+										{
+											"key": "unprocessed",
+											"value": "true"
+										},
+										{
+											"key": "filter",
+											"value": "sint pariat"
+										},
+										{
+											"key": "filter",
+											"value": "veniam"
+										},
+										{
+											"key": "receiver",
+											"value": "incididunt la"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"annotations\": {\n      \"Ut05\": \"pariatur sun\"\n    },\n    \"endsAt\": \"1988-04-04T14:11:54.944Z\",\n    \"fingerprint\": \"dolore aliqua\",\n    \"labels\": {\n      \"mollit2\": \"ipsum et pariatur cupidatat\",\n      \"incididunt93e\": \"Excepteur pariatur ex in fugiat\"\n    },\n    \"receivers\": [\n      {\n        \"name\": \"deserunt anim fugiat do\"\n      },\n      {\n        \"name\": \"nostrud incididunt sit\"\n      }\n    ],\n    \"startsAt\": \"1993-03-21T06:02:49.892Z\",\n    \"status\": {\n      \"state\": \"active\",\n      \"silencedBy\": [\n        \"qui adipisicing culpa\",\n        \"officia Ut cillum amet\"\n      ],\n      \"inhibitedBy\": [\n        \"aliquip et ullamco consequat\",\n        \"Duis magna labore\"\n      ]\n    },\n    \"updatedAt\": \"1961-10-19T02:01:29.639Z\",\n    \"generatorURL\": \"http://tUJieMjDOHdxgUutzqAmvgymHjf.foPYShlPrGd.JvT4M4BRz2xXlYb149mrvVY7kHr2Wltqw-4xglQxWHAU3PPsr\"\n  },\n  {\n    \"annotations\": {\n      \"commodo_b\": \"dolor mollit Du\",\n      \"et8\": \"aliquip sit commodo\"\n    },\n    \"endsAt\": \"1965-02-09T03:18:08.931Z\",\n    \"fingerprint\": \"ut\",\n    \"labels\": {\n      \"do_de\": \"pariatur in aliqua\",\n      \"reprehenderitb6\": \"amet tempor consequat in\",\n      \"sunt_b43\": \"quis adipisicing in\"\n    },\n    \"receivers\": [\n      {\n        \"name\": \"officia labore cillum minim\"\n      },\n      {\n        \"name\": \"velit magna non\"\n      }\n    ],\n    \"startsAt\": \"2015-01-07T20:38:31.157Z\",\n    \"status\": {\n      \"state\": \"active\",\n      \"silencedBy\": [\n        \"officia ex\",\n        \"velit do aliquip\"\n      ],\n      \"inhibitedBy\": [\n        \"amet commodo minim enim\",\n        \"commodo \"\n      ]\n    },\n    \"updatedAt\": \"2016-08-12T15:51:31.470Z\",\n    \"generatorURL\": \"https://PBeYfNkHxP.qghSy9XWdjPCEZhxEIaz7GDqvWc3Pm4S562ecFRYuvjmz0XuhzvYicYA.FZyiuPzmSjlrONzI\"\n  }\n]"
+						},
+						{
+							"name": "Bad request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/alerts?active=true&silenced=true&inhibited=true&unprocessed=true&filter=sint pariat&filter=veniam&receiver=incididunt la",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"alerts"
+									],
+									"query": [
+										{
+											"key": "active",
+											"value": "true"
+										},
+										{
+											"key": "silenced",
+											"value": "true"
+										},
+										{
+											"key": "inhibited",
+											"value": "true"
+										},
+										{
+											"key": "unprocessed",
+											"value": "true"
+										},
+										{
+											"key": "filter",
+											"value": "sint pariat"
+										},
+										{
+											"key": "filter",
+											"value": "veniam"
+										},
+										{
+											"key": "receiver",
+											"value": "incididunt la"
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "\"incididunt la\""
+						},
+						{
+							"name": "Internal server error",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/alerts?active=true&silenced=true&inhibited=true&unprocessed=true&filter=sint pariat&filter=veniam&receiver=incididunt la",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"alerts"
+									],
+									"query": [
+										{
+											"key": "active",
+											"value": "true"
+										},
+										{
+											"key": "silenced",
+											"value": "true"
+										},
+										{
+											"key": "inhibited",
+											"value": "true"
+										},
+										{
+											"key": "unprocessed",
+											"value": "true"
+										},
+										{
+											"key": "filter",
+											"value": "sint pariat"
+										},
+										{
+											"key": "filter",
+											"value": "veniam"
+										},
+										{
+											"key": "receiver",
+											"value": "incididunt la"
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "\"incididunt la\""
+						}
+					]
+				},
+				{
+					"name": "post Alerts",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n  {\n    \"labels\": {\n      \"aliqua_4\": \"velit pariatur labore occaecat\"\n    },\n    \"startsAt\": \"1979-02-13T04:42:06.725Z\",\n    \"endsAt\": \"1948-12-08T14:07:02.105Z\",\n    \"annotations\": {\n      \"cupidatatd\": \"Ut\",\n      \"occaecat878\": \"ullamco nostrud fugiat\"\n    },\n    \"generatorURL\": \"https://vaI.lqdkWCePhS,lWLD-5fF2aQacC2HQFVhp0smnRMZzCu6wv4-r\"\n  },\n  {\n    \"labels\": {\n      \"consequat54\": \"Excepteur\"\n    },\n    \"startsAt\": \"1968-05-25T11:06:08.522Z\",\n    \"endsAt\": \"1948-05-30T21:59:47.597Z\",\n    \"annotations\": {\n      \"amet_c\": \"nostrud sunt\",\n      \"adipisicinga9f\": \"ex culpa\",\n      \"aliquac4\": \"eu\"\n    },\n    \"generatorURL\": \"http://XYkhGjTqXdInuKEpSmevJDgb.agjVRM1BbM,qPBamrSAFc4CbQ4rzsYykG\"\n  }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/alerts",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"alerts"
+							]
+						},
+						"description": "Create new Alerts"
+					},
+					"response": [
+						{
+							"name": "Create alerts response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n  {\n    \"labels\": {\n      \"adipisicing__b\": \"est veniam\"\n    },\n    \"startsAt\": \"1962-01-05T01:02:59.400Z\",\n    \"endsAt\": \"1996-04-07T11:19:24.448Z\",\n    \"annotations\": {\n      \"qui_1\": \"sit\",\n      \"culpa_01\": \"sunt Excepteur veniam anim\"\n    },\n    \"generatorURL\": \"http://WrQqzZFXCOPFUYPUkHIHVML.hxsJBP0jtbT.wGqW3zCJqUj5t4c5hM.bmB0FepcSEE4kqycADWrhZNobSRj\"\n  },\n  {\n    \"labels\": {\n      \"officia1\": \"amet nostrud officia\",\n      \"sit_\": \"Ut non in\"\n    },\n    \"startsAt\": \"1998-07-27T02:25:43.717Z\",\n    \"endsAt\": \"1947-07-29T08:53:02.748Z\",\n    \"annotations\": {\n      \"cillum_a\": \"adipisicing ex dolor laboris\",\n      \"ut_b\": \"exercitation eiusmod laborum aliqua\"\n    },\n    \"generatorURL\": \"https://GkbrBbkbaGjCn.guQrJbpPtX-0PnSoSoThOz1zB5SDKhrgLteIkEc9iQTCpIhHg3oPgPGzn08DXFD-D83ZVQmpp4h\"\n  }\n]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/alerts",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"alerts"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Bad request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n  {\n    \"labels\": {\n      \"adipisicing__b\": \"est veniam\"\n    },\n    \"startsAt\": \"1962-01-05T01:02:59.400Z\",\n    \"endsAt\": \"1996-04-07T11:19:24.448Z\",\n    \"annotations\": {\n      \"qui_1\": \"sit\",\n      \"culpa_01\": \"sunt Excepteur veniam anim\"\n    },\n    \"generatorURL\": \"http://WrQqzZFXCOPFUYPUkHIHVML.hxsJBP0jtbT.wGqW3zCJqUj5t4c5hM.bmB0FepcSEE4kqycADWrhZNobSRj\"\n  },\n  {\n    \"labels\": {\n      \"officia1\": \"amet nostrud officia\",\n      \"sit_\": \"Ut non in\"\n    },\n    \"startsAt\": \"1998-07-27T02:25:43.717Z\",\n    \"endsAt\": \"1947-07-29T08:53:02.748Z\",\n    \"annotations\": {\n      \"cillum_a\": \"adipisicing ex dolor laboris\",\n      \"ut_b\": \"exercitation eiusmod laborum aliqua\"\n    },\n    \"generatorURL\": \"https://GkbrBbkbaGjCn.guQrJbpPtX-0PnSoSoThOz1zB5SDKhrgLteIkEc9iQTCpIhHg3oPgPGzn08DXFD-D83ZVQmpp4h\"\n  }\n]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/alerts",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"alerts"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "\"incididunt la\""
+						},
+						{
+							"name": "Internal server error",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n  {\n    \"labels\": {\n      \"adipisicing__b\": \"est veniam\"\n    },\n    \"startsAt\": \"1962-01-05T01:02:59.400Z\",\n    \"endsAt\": \"1996-04-07T11:19:24.448Z\",\n    \"annotations\": {\n      \"qui_1\": \"sit\",\n      \"culpa_01\": \"sunt Excepteur veniam anim\"\n    },\n    \"generatorURL\": \"http://WrQqzZFXCOPFUYPUkHIHVML.hxsJBP0jtbT.wGqW3zCJqUj5t4c5hM.bmB0FepcSEE4kqycADWrhZNobSRj\"\n  },\n  {\n    \"labels\": {\n      \"officia1\": \"amet nostrud officia\",\n      \"sit_\": \"Ut non in\"\n    },\n    \"startsAt\": \"1998-07-27T02:25:43.717Z\",\n    \"endsAt\": \"1947-07-29T08:53:02.748Z\",\n    \"annotations\": {\n      \"cillum_a\": \"adipisicing ex dolor laboris\",\n      \"ut_b\": \"exercitation eiusmod laborum aliqua\"\n    },\n    \"generatorURL\": \"https://GkbrBbkbaGjCn.guQrJbpPtX-0PnSoSoThOz1zB5SDKhrgLteIkEc9iQTCpIhHg3oPgPGzn08DXFD-D83ZVQmpp4h\"\n  }\n]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/alerts",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"alerts"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "\"incididunt la\""
+						}
+					]
+				},
+				{
+					"name": "get Alert Groups",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/alerts/groups?active=true&silenced=true&inhibited=true&filter=magna&filter=cupidatat ea sint&receiver=incididunt la",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"alerts",
+								"groups"
+							],
+							"query": [
+								{
+									"key": "active",
+									"value": "true",
+									"description": "Show active alerts"
+								},
+								{
+									"key": "silenced",
+									"value": "true",
+									"description": "Show silenced alerts"
+								},
+								{
+									"key": "inhibited",
+									"value": "true",
+									"description": "Show inhibited alerts"
+								},
+								{
+									"key": "filter",
+									"value": "magna",
+									"description": "A list of matchers to filter alerts by"
+								},
+								{
+									"key": "filter",
+									"value": "cupidatat ea sint",
+									"description": "A list of matchers to filter alerts by"
+								},
+								{
+									"key": "receiver",
+									"value": "incididunt la",
+									"description": "A regex matching receivers to filter alerts by"
+								}
+							]
+						},
+						"description": "Get a list of alert groups"
+					},
+					"response": [
+						{
+							"name": "Get alert groups response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/alerts/groups?active=true&silenced=true&inhibited=true&filter=sint pariat&filter=veniam&receiver=incididunt la",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"alerts",
+										"groups"
+									],
+									"query": [
+										{
+											"key": "active",
+											"value": "true"
+										},
+										{
+											"key": "silenced",
+											"value": "true"
+										},
+										{
+											"key": "inhibited",
+											"value": "true"
+										},
+										{
+											"key": "filter",
+											"value": "sint pariat"
+										},
+										{
+											"key": "filter",
+											"value": "veniam"
+										},
+										{
+											"key": "receiver",
+											"value": "incididunt la"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"labels\": {\n      \"proident_a6d\": \"esse velit incididunt sit ut\",\n      \"ipsum_1ff\": \"et culpa deserunt\",\n      \"sunt5\": \"exercitation minim nostrud ipsum\"\n    },\n    \"receiver\": {\n      \"name\": \"sit magna\"\n    },\n    \"alerts\": [\n      {\n        \"annotations\": {\n          \"ut_\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"laborum_30\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        },\n        \"endsAt\": \"1999-04-26T22:07:28.645Z\",\n        \"fingerprint\": \"officia occaecat dolore ipsum exercitation\",\n        \"labels\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"receivers\": [\n          {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        ],\n        \"startsAt\": \"2021-01-16T00:57:39.569Z\",\n        \"status\": {\n          \"state\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"silencedBy\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"inhibitedBy\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        },\n        \"updatedAt\": \"1975-03-11T21:29:48.025Z\",\n        \"generatorURL\": \"https://rzsnnSsbWAttzDYweoojUShvKK.adqojv,JjliyOrtOJj1N5+SpaCeOMXTqxmHMJZv\"\n      },\n      {\n        \"annotations\": {\n          \"sunta19\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        },\n        \"endsAt\": \"2022-06-28T03:10:42.030Z\",\n        \"fingerprint\": \"exercitation dolor mollit fugiat nisi\",\n        \"labels\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"receivers\": [\n          {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        ],\n        \"startsAt\": \"2000-10-15T18:08:44.225Z\",\n        \"status\": {\n          \"state\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"silencedBy\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"inhibitedBy\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        },\n        \"updatedAt\": \"1982-06-29T01:46:20.707Z\",\n        \"generatorURL\": \"http://OIB.pyeFZRKJKR3hTvJNcQQxvYcE2-SnbonHrSH2T5dQDtbUrSnRwpihdH6Bfzx9YTm4-UBS\"\n      }\n    ]\n  },\n  {\n    \"labels\": {\n      \"adipisicing__\": \"Ut sint\"\n    },\n    \"receiver\": {\n      \"name\": \"tempor dolo\"\n    },\n    \"alerts\": [\n      {\n        \"annotations\": {\n          \"in__15\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        },\n        \"endsAt\": \"1974-08-22T11:08:46.194Z\",\n        \"fingerprint\": \"elit sit eiusmod\",\n        \"labels\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"receivers\": [\n          {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        ],\n        \"startsAt\": \"1970-12-18T21:06:12.243Z\",\n        \"status\": {\n          \"state\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"silencedBy\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"inhibitedBy\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        },\n        \"updatedAt\": \"1977-10-31T03:40:16.152Z\",\n        \"generatorURL\": \"http://KrGulAeiIa.aujpGEPqKd+aI41BWkgXB2WQF9hWz\"\n      },\n      {\n        \"annotations\": {\n          \"aliqua_bf9\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"eiusmod811\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        },\n        \"endsAt\": \"1948-03-31T05:57:05.048Z\",\n        \"fingerprint\": \"Duis id sit tempor\",\n        \"labels\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"receivers\": [\n          {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        ],\n        \"startsAt\": \"2002-07-15T09:59:08.265Z\",\n        \"status\": {\n          \"state\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"silencedBy\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"inhibitedBy\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        },\n        \"updatedAt\": \"1949-02-24T11:15:31.483Z\",\n        \"generatorURL\": \"https://BjZSBWVrda.pdgzH5fJcd3l7i2FVHOH11uSJFuDuG8p\"\n      }\n    ]\n  }\n]"
+						},
+						{
+							"name": "Bad request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/alerts/groups?active=true&silenced=true&inhibited=true&filter=sint pariat&filter=veniam&receiver=incididunt la",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"alerts",
+										"groups"
+									],
+									"query": [
+										{
+											"key": "active",
+											"value": "true"
+										},
+										{
+											"key": "silenced",
+											"value": "true"
+										},
+										{
+											"key": "inhibited",
+											"value": "true"
+										},
+										{
+											"key": "filter",
+											"value": "sint pariat"
+										},
+										{
+											"key": "filter",
+											"value": "veniam"
+										},
+										{
+											"key": "receiver",
+											"value": "incididunt la"
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "\"incididunt la\""
+						},
+						{
+							"name": "Internal server error",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/alerts/groups?active=true&silenced=true&inhibited=true&filter=sint pariat&filter=veniam&receiver=incididunt la",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"alerts",
+										"groups"
+									],
+									"query": [
+										{
+											"key": "active",
+											"value": "true"
+										},
+										{
+											"key": "silenced",
+											"value": "true"
+										},
+										{
+											"key": "inhibited",
+											"value": "true"
+										},
+										{
+											"key": "filter",
+											"value": "sint pariat"
+										},
+										{
+											"key": "filter",
+											"value": "veniam"
+										},
+										{
+											"key": "receiver",
+											"value": "incididunt la"
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "\"incididunt la\""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "get Status",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/status",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"status"
+					]
+				},
+				"description": "Get current status of an Alertmanager instance and its cluster"
+			},
+			"response": [
+				{
+					"name": "Get status response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/status",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"status"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n  \"cluster\": {\n    \"status\": \"ready\",\n    \"name\": \"laborum id est vol\",\n    \"peers\": [\n      {\n        \"name\": \"sit consectetur \",\n        \"address\": \"aliquip non in consectetur au\"\n      },\n      {\n        \"name\": \"laboris\",\n        \"address\": \"magna tempor\"\n      }\n    ]\n  },\n  \"versionInfo\": {\n    \"version\": \"non nulla laborum Excepteur\",\n    \"revision\": \"sunt enim ad ullamco\",\n    \"branch\": \"commodo irure enim\",\n    \"buildUser\": \"anim non dolore in\",\n    \"buildDate\": \"deserunt anim sit\",\n    \"goVersion\": \"tempor ut ipsum do\"\n  },\n  \"config\": {\n    \"original\": \"ut minim occaecat magna\"\n  },\n  \"uptime\": \"1977-05-06T01:07:26.220Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "get Receivers",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/receivers",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"receivers"
+					]
+				},
+				"description": "Get list of all receivers (name of notification integrations)"
+			},
+			"response": [
+				{
+					"name": "Get receivers response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/receivers",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"receivers"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "[\n  {\n    \"name\": \"dolor\"\n  },\n  {\n    \"name\": \"nulla incididunt in\"\n  }\n]"
+				}
+			]
+		},
+		{
+			"name": "http://192.168.8.244:9093/api/v2/alerts",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n  {\r\n    \"labels\": {\r\n       \"alertname\": \"系统连续崩溃，已经出现雪崩状况！\",\r\n       \"dev\": \"sda1\",\r\n       \"instance\": \"实例1\",\r\n       \"msgtype\": \"testing\"\r\n     },\r\n     \"annotations\": {\r\n        \"info\": \"程序员小王提示您：这个系统雪崩了，快处理！\",\r\n        \"summary\": \"请检查实例示例1\"\r\n      }\r\n  },\r\n  {\r\n    \"labels\": {\r\n       \"alertname\": \"管理系统损坏9\",\r\n       \"dev\": \"sda2\",\r\n       \"instance\": \"实例1\",\r\n       \"msgtype\": \"testing\"\r\n     },\r\n     \"annotations\": {\r\n        \"info\": \"程序员小王提示您：电子商务管理系统中订单，仓库模块已经雪崩，快处理！\",\r\n        \"summary\": \"请检查实例示例1\",\r\n        \"runbook\": \"以下链接http://192.168.5.128:9093/api/v2/alerts应该是可点击的\"\r\n      }\r\n  }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.8.244:9093/api/v2/alerts",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"8",
+						"244"
+					],
+					"port": "9093",
+					"path": [
+						"api",
+						"v2",
+						"alerts"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://192.168.8.244:9093/api/v2/",
+			"type": "string"
+		}
+	]
+}

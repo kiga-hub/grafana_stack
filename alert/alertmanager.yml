@@ -1,0 +1,42 @@
+global:
+  resolve_timeout: 5m
+
+# smtp配置 g根据需求是否配置邮箱
+# smtp_from: "123456789@qq.com"
+# smtp_smarthost: 'smtp.qq.com:465'
+#smtp_auth_username: "123456789@qq.com"
+# smtp_auth_password: "auth_pass"
+# smtp_require_tls: true
+
+
+route:
+  receiver: webhook
+  group_wait: 30s   # 在组内等待所配置的时间，如果同组内，30秒内出现相同报警，在一个组内出现。
+  group_interval: 5m  # 如果组内内容不变化，合并为一条警报信息，5m后发送
+  repeat_interval: 5m  # 发送报警间隔，如果指定时间内没有修复，则重新发送报警
+  group_by: [alertname]
+  routes:
+  - receiver: webhook
+    group_wait: 10s
+receivers:
+- name: webhook
+  webhook_configs:
+  - url: http://192.168.8.244:7777/alertmanager/webhook             
+    send_resolved: true
+
+inhibit_rules:
+ - source_matchers:
+    - level="P2"
+   target_matchers:
+    - level="P3"
+   equal: ['group', 'instance', 'altername']
+ - source_matchers:
+    - level="P1"
+   target_matchers:
+    - level=~"P2|P3"
+   equal: ['group', 'instance', 'altername']
+ - source_matchers:
+    - level="P0"
+   target_matchers:
+    - level=~"P1|p2|p3"
+   equal: ['group', 'instance', 'altername']
