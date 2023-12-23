@@ -63,3 +63,9 @@ refer to the following link for more information on the alertmanager API.
 - (https://github.com/prometheus/alertmanager)
 
 import Alertmanager_API.postman_collection.json to postman.
+
+postman post request example(send to alertmanager)
+
+```bash
+http://ip:9093/api/v2/alerts
+```
